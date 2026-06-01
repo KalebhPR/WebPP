@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="Transporte privado en Costa Rica. Autobuses, excursiones y traslados seguros.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico.ico">
+  <title>Primera Plus CR - Transporte Empresarial</title>
+  <link rel="stylesheet" href="scp/style.css?v=1.6">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-container">
+    <a href="#">
+      <img src="img/logo2.png" alt="Primera Plus CR - Logo" class="logo">
+    </a>
+  </div>
+  <nav id="nav" class="navbar">
+    <a href="#inicio" class="nav-link">Inicio</a>
+    <a href="#servicios" class="nav-link">Servicios</a>
+    <a href="galery.html" class="nav-link">Galería</a>
+    <a href="contact.html" class="nav-link btn btn-accent">Contactenos</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-slider" id="heroSlider">
+    <div class="slide active">
+      <img src="img/galery/bus1.png" alt="Autobús empresarial">
+      <div class="overlay">
+        <div class="overlay-content">
+          <h1>Movemos personas,</h1>
+          <h1y>Conectamos destinos</h1y>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img/galery/bus2.png" alt="Autobús moderno">
+      <div class="overlay">
+        <div class="overlay-content">
+          <h1>Comodidad</h1>
+          <h1y>y Puntualidad</h1y>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img/galery/bus7.jpeg" alt="Autobús turismo">
+      <div class="overlay">
+        <div class="overlay-content">
+          <h1>Turismo</h1>
+          <h1y>y Excursiones</h1y>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+  <button class="slider-btn next" onclick="moveSlide(1)">❯</button> -->
+  <div class="slider-indicators">
+    <span class="dot active" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+</section>
+
+<div class="value-strip">
+  <div class="value-strip-inner">
+    <div class="value-item">
+      <div class="value-icon">
+        <svg fill="#D4A017" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M31.25,7.4a43.79,43.79,0,0,1-6.62-2.35,45,45,0,0,1-6.08-3.21L18,1.5l-.54.35a45,45,0,0,1-6.08,3.21A43.79,43.79,0,0,1,4.75,7.4L4,7.59v8.34c0,13.39,13.53,18.4,13.66,18.45l.34.12.34-.12c.14,0,13.66-5.05,13.66-18.45V7.59Zm-4.57,6.65L15.51,24.9,9.19,18.57a1.4,1.4,0,0,1,2-2L15.54,21,24.73,12a1.4,1.4,0,1,1,2,2Z"/></svg>
+      </div>
+      <div class="value-text">
+        <span>VIAJE SEGURO COMO PRIORIDAD</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg fill="#D4A017" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13,11 L17,11 L17,13 L11,13 L11,6 L13,6 L13,11 Z"/></svg>
+      </div>
+      <div class="value-text">
+        <span>PUNTUALIDAD GARANTIZADA</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="#D4A017" aria-hidden="true">
+          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 3a2.5 2.5 0 1 1-2.5 2.5A2.5 2.5 0 0 1 12 5Zm0 14a6.5 6.5 0 0 1-5.2-2.6 5.8 5.8 0 0 1 10.4 0A6.5 6.5 0 0 1 12 19Z"/>
+        </svg>
+      </div>
+      <div class="value-text">
+        <span>CONDUCTORES PROFESIONALES</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg fill="#D4A017" viewBox="0 0 24 24" aria-hidden="true""><path d="M7 2a3 3 0 0 0-3 3v9a3 3 0 0 0 2 2.82V19a1 1 0 1 0 2 0v-2h8v2a1 1 0 1 0 2 0v-2.18A3 3 0 0 0 20 14V5a3 3 0 0 0-3-3H7Zm0 2h10a1 1 0 0 1 1 1v5H6V5a1 1 0 0 1 1-1Zm-1 8h12v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2Zm2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm8 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg>
+      </div>
+      <div class="value-text">
+        <span>FLOTA MODERNA Y SEGURA</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg fill="#D4A017" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a8 8 0 0 0-8 8v3a3 3 0 0 0 3 3h1v-6H6a6 6 0 0 1 12 0h-2v6h2a2 2 0 0 1-2 2h-3v2h3a4 4 0 0 0 4-4v-6a8 8 0 0 0-8-8Z"/></svg>
+      </div>
+      <div class="value-text">
+        <span>ATENCION GARANTIZADA</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg fill="#D4A017" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 3C12 3 6 7 6 13a5 5 0 0 0 5 5c6 0 10-6 10-15h-3.5ZM8 13c0-3.5 3-6 8-7-1 5-4 9-8 9a2 2 0 0 1 0-2Z"/></svg>
+      </div>
+      <div class="value-text">
+        <span>COMPROMISO CON COSTA RICA</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section servicios" id="servicios">
+  <div class="section-header">
+    <h2>Nuestros Servicios</h2>
+    <p class="section-subtitle">Soluciones de transporte adaptadas a tus necesidades</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9h12M6 9c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2zM6 9V7c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v2"/>
+        </svg>
+      </div>
+      <h3>Transporte Empresarial</h3>
+      <p>En Primera Plus CR entendemos que el transporte de colaboradores es una función crítica dentro de cualquier organización. Cada persona que trasladamos representa productividad, continuidad operativa y cumplimiento de objetivos para nuestros clientes.</p>
+      <details>
+      <summary>Ver Más</summary>  
+      <p>Con más de 80.000 viajes realizados, hemos desarrollado una operación especializada en transporte corporativo capaz de atender empresas de diferentes sectores productivos, brindando soluciones seguras, confiables y adaptadas a las necesidades específicas de cada operación.</p>
+      <p>Nuestro compromiso va más allá de movilizar personas. Trabajamos para garantizar que los colaboradores lleguen a sus puestos de trabajo de forma segura, puntual y eficiente, contribuyendo directamente a la continuidad de las operaciones de nuestros clientes.</p>
+      <p>Ofrecemos servicios de rutas fijas, transporte puerta a puerta (Door to Door), transporte para turnos especiales, operaciones nocturnas, horarios rotativos y servicios disponibles las 24 horas del día, los 7 días de la semana.</p>
+      <p>Contamos con un centro de monitoreo operativo 24/7 que permite supervisar en tiempo real nuestras unidades, gestionar incidencias, coordinar recursos y brindar una respuesta rápida ante cualquier eventualidad.</p>
+      <p>La tecnología forma parte esencial de nuestra operación. Utilizamos herramientas de monitoreo GPS, control de rutas, trazabilidad de viajes, reportería operativa y sistemas digitales que permiten un seguimiento constante del servicio y una administración eficiente de los recursos.</p>
+      <p>Sabemos que la continuidad de una empresa no puede depender de la suerte. Por ello contamos con protocolos de contingencia, vehículos sustitutos y capacidad de reacción ante imprevistos mecánicos, incidentes en carretera o incrementos inesperados en la demanda, minimizando cualquier impacto sobre la operación de nuestros clientes.</p>
+      <p>Nuestro objetivo es ofrecer la tranquilidad de contar con un aliado estratégico que entiende la importancia del recurso humano dentro de las organizaciones. Cuando una empresa confía en Primera Plus CR, sabe que detrás de cada servicio existe una estructura operativa comprometida con garantizar la movilidad de sus colaboradores todos los días del año.</p>
+      <p>Adicionalmente, mantenemos estrictos programas de mantenimiento preventivo y correctivo, capacitación constante de conductores, gestión responsable de residuos, lubricantes y filtros, así como procedimientos de seguridad orientados a proteger tanto a los pasajeros como a la operación.</p>
+      <p>En Primera Plus CR no solamente transportamos colaboradores; contribuimos a que las empresas sigan funcionando. Nuestro compromiso es ofrecer soluciones de movilidad corporativa respaldadas por experiencia, tecnología, capacidad operativa y una verdadera cultura de servicio.</p>
+      </details>
+      <a href="contact.html" class="service-link">Solicitar →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+           <path id="primary" d="M12,3V4M5.64,5.64l.7.7M3,12H4m1.64,6.36.7-.7M12,21V20m6.36-1.64-.7-.7M21,12H20M18.36,5.64l-.7.7M12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3>Turismo y Viajes</h3>
+      <p>En Primera Plus CR ponemos toda nuestra experiencia operativa, equipo humano y capacidad logística al servicio de grupos, organizaciones, instituciones, centros educativos, asociaciones, empresas y operadores turísticos que requieren soluciones de transporte seguras y confiables para cualquier destino del país.</p>
+      <details>
+      <summary>Ver Más</summary>  
+      <p>Disponemos de unidades con capacidades para 15, 28, 34, 45, 50 y 55 pasajeros, permitiéndonos adaptarnos a las necesidades específicas de cada grupo y tipo de actividad.</p>
+      <p>Nuestra flota incluye vehículos con y sin aire acondicionado, unidades con asientos reclinables, amplios maleteros y diferentes configuraciones para garantizar comodidad y funcionalidad según el tipo de viaje.</p>
+      <p>Más que ofrecer transporte, ofrecemos tranquilidad. Nuestro compromiso es que cada grupo llegue a su destino de forma segura, puntual y cómoda, respaldado por una empresa con experiencia comprobada, soporte operativo y personal comprometido con la calidad del servicio.</p>
+      <p>Realizamos excursiones, paseos familiares, viajes estudiantiles, giras empresariales, actividades recreativas, eventos deportivos, congresos, convenciones, traslados a playas, montañas, parques nacionales, hoteles y cualquier otro destino dentro del territorio nacional.</p>
+      <p>No competimos por ser la opción más barata; competimos por ser la opción más confiable. Nuestra propuesta de valor se basa en la seguridad, la responsabilidad, la experiencia, la atención al cliente y la capacidad de respuesta que nuestros clientes necesitan para que cada viaje sea un éxito.</p>
+      <p>Cuando usted contrata a Primera Plus CR, contrata una empresa comprometida con el resultado de su actividad, desde la salida hasta el regreso de cada pasajero.</p>
+      </details>
+      <a href="contact.html" class="service-link">Solicitar →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <h3>Transporte Ejecutivo y VIP</h3>
+      <p>Ofrecemos soluciones de transporte ejecutivo diseñadas para empresas que requieren movilizar gerencias, directivos, inversionistas, clientes estratégicos, consultores y visitantes internacionales con los más altos estándares de comodidad, puntualidad y discreción.</p>
+      <details>
+      <summary>Ver Más</summary>  
+      <p>Brindamos servicios de traslado aeropuerto-hotel, hotel-aeropuerto, visitas corporativas, reuniones de negocios, recorridos de inspección, giras empresariales y atención de delegaciones nacionales e internacionales.</p>
+      <p>Nuestra flota ejecutiva está orientada a proporcionar una experiencia cómoda, segura y profesional, respaldada por conductores altamente capacitados y la posibilidad de coordinar servicios con personal bilingüe según las necesidades del cliente.</p>
+      <p>Entendemos que la primera impresión es importante. Por ello cuidamos cada detalle de la experiencia de transporte, garantizando puntualidad, presentación impecable de las unidades, atención profesional y acompañamiento durante toda la operación.</p>
+      <p>Ya sea para una visita de negocios, una gira técnica o el traslado de altos ejecutivos, Primera Plus CR pone a disposición de su empresa una solución de movilidad ejecutiva acorde con los más altos estándares corporativos.</p>
+      </details>
+      <a href="contact.html" class="service-link">Solicitar →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-section" id="gallery">
+  <div class="section-header">
+    <h2>Nuestra Flota</h2>
+    <p class="section-subtitle">Vehículos modernos y bien mantenidos</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="img/county.jpeg" alt="Autobús 1">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(2)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/caio.jpeg" alt="Autobús 2">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(1)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/viaggio.jpeg" alt="Autobús 3">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(8)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/daewoo.jpeg" alt="Autobús 4">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(3)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/andare.jpeg" alt="Autobús 1">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(0)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/grandBird.jpeg" alt="Autobús 2">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(4)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/urbanuss.jpeg" alt="Autobús 3">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(9)">Ver</button>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/kingLong2.jpeg" alt="Autobús 4">
+      <div class="gallery-overlay">
+        <button class="gallery-btn" onclick="openLightbox(7)">Ver</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contacto">
+  <div class="cta-content">
+    <h2>¿Necesitas Transporte Profesional?</h2>
+    <p>Contacta con nuestro equipo y obtén una cotización personalizada</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-primary">Cotice un viaje</a>
+      <a href="tel:+50660168523" class="btn btn-secondary">Llamar Ahora</a>
+      <a href="mailto:info@primerapluscr.net" class="btn btn-secondary">Enviar Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      
+      <div class="footer-col">
+        <h4>Navegación Rápida</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="galery.html">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nuestros Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Transporte Empresarial</a></li>
+          <li><a href="#servicios">Transporte Turístico</a></li>
+          <li><a href="#servicios">Excursiones Grupales</a></li>
+          <li><a href="#servicios">Traslados Especiales</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información de Contacto</h4>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.37a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.56h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.1a16 16 0 006 6l.36-.36a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <div>
+              <p class="contact-label">Teléfono</p>
+              <a href="tel:+50660168523">+506 6016 8523</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 6l10 8 10-8"/>
+            </svg>
+            <div>
+              <p class="contact-label">Email</p>
+              <a href="mailto:info@primerapluscr.net">info@primerapluscr.net</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div>
+              <p class="contact-label">Ubicación</p>
+              <span>Plaza González Víquez costado oeste China Mall, frente a la Policia de Transito , San José, Costa Rica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <p class="social-intro">Conecta con nosotros</p>
+        <div class="social-links">
+          <a href="https://surl.li/mwuxfk" class="social-link" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/50660168523" class="social-link" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44ZM12.07 21.8h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.74.98 1-3.64-.24-.37a9.84 9.84 0 0 1-1.52-5.27c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.11 1.03 6.98 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.46-4.44 9.9-9.89 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.88.11.57-.08 1.76-.72 2.01-1.42.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Certificados Pymes</h4>
+          <div class="sello-container">
+            <img src="img/sello_pyme.webp" alt="Certificado Pymes" class="sello">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Primera Plus CR. Todos los derechos reservados.</p>
+      <p>Transporte empresarial privado de calidad en Costa Rica</p>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">✖</span>
+  <img id="lightbox-img" alt="Galería ampliada">
+  <button class="lightbox-btn prev" onclick="changeSlide(-1)">❮</button>
+  <button class="lightbox-btn next" onclick="changeSlide(1)">❯</button>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<a href="https://wa.me/1234567890?text=hello+123" target=”_blank” class="whatsapp-btn-2">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<script src="scp/app.js?v=1."></script>
+</body>
+</html>
