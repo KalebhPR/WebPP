@@ -566,3 +566,9 @@ body {
     padding-top: 20px;
   }
 }
+
+@media (max-width: 1024px) {
+  .lightbox-btn {
+    display: none;  /* Botones desaparecen en tablet/móvil */
+  }
+}

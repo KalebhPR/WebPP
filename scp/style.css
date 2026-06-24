@@ -428,12 +428,18 @@ body {
 }
 
 .service-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--accent);
-  text-decoration: none;
+  display: block;           /* Ocupa ancho completo */
+  width: 100%;
+  padding: 14px 20px;       /* Más grande */
+  background-color: white;     /* Color primario */
+  color: #D4A017;           /* Texto dorado */
+  border: 2px solid #254568;
+  border-radius: 6px;
   font-weight: 600;
-  transition: var(--transition);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
 }
 
 .service-link:hover {
@@ -1327,4 +1333,46 @@ details p {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #eee;
+}
+
+@media (max-width: 1024px) {
+  .lightbox-btn {
+    display: none;  /* Botones desaparecen en móvil/tablet */
+  }
+}
+
+/* EN style.css - BOTÓN "VER MÁS" GRANDE */
+
+.btn-more {
+  display: block;           /* Ocupa ancho completo */
+  width: 100%;
+  padding: 14px 20px;       /* Más grande */
+  background-color: white;     /* Color primario */
+  color: #D4A017;           /* Texto dorado */
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-more:hover {
+  background-color: #D4A017;  /* Al hover: fondo dorado */
+  color: #0D1B2A;             /* Texto oscuro */
+}
+
+.btn-more.active {
+  background-color: #D4A017;
+  color: #0D1B2A;
+}
+
+.service-card p[style*="display"] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;  /* Animación suave */
+}
+.service-card p {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
