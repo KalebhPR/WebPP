@@ -104,6 +104,25 @@ function changeSlide(direction) {
   lightboxImg.src = images[currentIndex];
 }
 
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+if (lightbox) {
+  let touchStartX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  lightbox.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const difference = touchStartX - touchEndX;
+    
+    if (difference > 50) changeSlide(1);      // Izquierda = siguiente
+    if (difference < -50) changeSlide(-1);    // Derecha = anterior
+  }, false);
+}
+
 // ═════════════════════════════════════════════════════════════════════════════════
 // 3. FUNCIONES DEL SLIDER DE HERO (para index.html y galery.html)
 // CON SOPORTE DE SWIPE (MOBILE) Y DRAG (DESKTOP)
@@ -329,3 +348,28 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 });
+//
+//
+//
+/*  FUNCIÓN PARA CAMBIAR TEXTO */
+
+function toggleText(btn) {
+  const card = btn.closest('.service-card');
+  const text = card.querySelector('p[style*="max-height"]');
+  
+  if (!text) return;
+  
+  const isHidden = text.style.maxHeight === "0px";
+  
+  if (isHidden) {
+    // Abre
+    text.style.maxHeight = "1000px";
+    text.style.opacity = "1";
+    btn.textContent = "Ver menos";
+  } else {
+    // Cierra
+    text.style.maxHeight = "0";
+    text.style.opacity = "0";
+    btn.textContent = "Ver más";
+  }
+}
